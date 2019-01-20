@@ -10,7 +10,7 @@ Les données du dataset seront modifiées dans cette optique.
 
 Enfin, nous afficherons notre prédiction via un graphique des ventes mensuel avec une prédiction sur l'année N+1.
 
-Résultat (prédiction en rouge) :
+Résultats (prédictions en rouge) :
  
 ![alt text](https://github.com/MathieuBerthier/ML_Time_Series-Superstore/blob/master/img/prediction_with_seasonnality.png)
 
@@ -65,7 +65,7 @@ y = furniture['Sales'].resample('MS').mean()
 ```
 
 Première prédiction graphique avec un lissage exponentiel double.
-=> Comme on peut le voir, le résultat est peu adapté
+ => Comme on peut le voir, le résultat est peu adapté
 
 ```
 '''Prédiction avec lissage exponentiel double'''
@@ -77,9 +77,10 @@ DES_predict = DES_fit.predict(start=0, end = 60)
 sns.lineplot(x = y.index, y = y )
 sns.lineplot(x = DES_predict.index, y = DES_predict )
 ```
-
+ ![alt text](https://github.com/MathieuBerthier/ML_Time_Series-Superstore/blob/master/img/prediction_without_seasonnality.png)
+ 
 On fait une nouvelle prédiction avec un lissage exponentiel + prise en compte de la saisonnalité (calculé sur une annnée).
-=> Ici, les résultats sont pertinents.
+ => Ici, les résultats sont pertinents.
 
 ```
 '''Prédiction avec lissage exponentiel + saisonnalité '''
@@ -90,3 +91,5 @@ TES_predict = TES_fit.predict(start=0, end = 60)
 sns.lineplot(x = y.index, y = y)
 sns.lineplot(x = TES_predict.index, y = TES_predict)
 ```
+ 
+![alt text](https://github.com/MathieuBerthier/ML_Time_Series-Superstore/blob/master/img/prediction_with_seasonnality.png)
