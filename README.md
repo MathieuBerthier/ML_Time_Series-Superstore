@@ -10,7 +10,7 @@ Les données du dataset seront modifiées dans cette optique.
 
 Enfin, nous afficherons notre prédiction via un graphique des ventes mensuel avec une prédiction sur l'année N+1.
 
-Résultats (prédictions en rouge) :
+**Résultats (prédictions en rouge) :**
  
 ![alt text](https://github.com/MathieuBerthier/ML_Time_Series-Superstore/blob/master/img/prediction_with_seasonnality.png)
 
