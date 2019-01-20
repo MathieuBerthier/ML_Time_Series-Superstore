@@ -65,7 +65,7 @@ y = furniture['Sales'].resample('MS').mean()
 ```
 
 Première prédiction graphique avec un lissage exponentiel double.
- => Comme on peut le voir, le résultat est peu adapté
+* Comme on peut le voir, le résultat est peu adapté
 
 ```
 '''Prédiction avec lissage exponentiel double'''
@@ -80,7 +80,7 @@ sns.lineplot(x = DES_predict.index, y = DES_predict )
  ![alt text](https://github.com/MathieuBerthier/ML_Time_Series-Superstore/blob/master/img/prediction_without_seasonnality.png)
  
 On fait une nouvelle prédiction avec un lissage exponentiel + prise en compte de la saisonnalité (calculé sur une annnée).
- => Ici, les résultats sont pertinents.
+* Ici, les résultats sont pertinents.
 
 ```
 '''Prédiction avec lissage exponentiel + saisonnalité '''
